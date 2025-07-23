@@ -1,0 +1,14 @@
+<div class="form-container">
+  <h2>Agregar Usuario</h2>
+  <form (ngSubmit)="guardar()">
+    <label for="name">Nombre:</label>
+    <input id="name" name="name" [(ngModel)]="name" required />
+
+    <label for="email">Email:</label>
+    <input id="email" name="email" [(ngModel)]="email" required />
+
+    <button type="submit">Guardar</button>
+  </form>
+
+  <p class="mensaje" *ngIf="mensaje">{{ mensaje }}</p>
+</div>

@@ -1,0 +1,24 @@
+<h2>Añadir usuario</h2>
+<form style="width: 400px">
+  <div class="mt-4 mb-3">
+    <label for="nameField" class="form-label">Nombre</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nameField"
+      [(ngModel)]="name"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="emailField" class="form-label">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="emailField"
+      [(ngModel)]="email"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </div>
+  <button class="btn btn-primary" (click)="addUser()">Enviar</button>
+</form>

@@ -1,10 +1,23 @@
 import { Routes } from '@angular/router';
-import { PortalComponent } from './portal/portal.component';
-import { AgregarComponent } from './agregar/agregar.component';
-import { ConsultarComponent } from './consultar/consultar.component';
+import { Portal } from './components/portal/portal';
+import { Add } from './components/add/add';
+import { Consult } from './components/consult/consult';
 
 export const routes: Routes = [
-  { path: '', component: PortalComponent },
-  { path: 'agregar', component: AgregarComponent },
-  { path: 'consultar', component: ConsultarComponent }
+  {
+    path: 'inicio',
+    component: Portal,
+  },
+  {
+    path: 'agregar',
+    component: Add,
+  },
+  {
+    path: 'consultar',
+    component: Consult,
+  },
+  {
+    path: '**',
+    redirectTo: '/inicio',
+  },
 ];
